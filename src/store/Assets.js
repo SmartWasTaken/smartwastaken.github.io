@@ -25,7 +25,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       id: 2,
-      title: "HYPER_LOOP_DASH",
+      title: "UNCHAINED",
       desc: "First Person Puzzle Horror Game",
       image: "https://img.itch.zone/aW1nLzE1NDkyOTAzLnBuZw==/original/q5he7V.png",
       link: "https://reibax.itch.io/unchained",
