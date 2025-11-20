@@ -5,6 +5,8 @@ export const useGameStore = create((set) => ({
   targetLocked: null,
   isScrolled: false,
   
+  section: 'main', 
+
   settings: {
     bloom: true,
     sparkles: true,
@@ -16,6 +18,8 @@ export const useGameStore = create((set) => ({
   setTarget: (id) => set({ targetLocked: id }),
   setScrolled: (status) => set({ isScrolled: status }),
   
+  setSection: (sec) => set({ section: sec }),
+
   toggleSetting: (key) => set((state) => ({
     settings: { ...state.settings, [key]: !state.settings[key] }
   })),

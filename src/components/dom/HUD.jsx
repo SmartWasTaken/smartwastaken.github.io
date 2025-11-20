@@ -3,10 +3,36 @@ import { useGameStore } from '../../store/gameStore';
 import { PORTFOLIO_DATA } from '../../store/Assets';
 
 export function HUD() {
-  const { score, targetLocked, isScrolled } = useGameStore();
+  const { score, targetLocked, isScrolled, section, setSection } = useGameStore();
 
   return (
     <div className={`pointer-events-none fixed inset-0 z-10 text-white font-mono transition-opacity duration-500 ${isScrolled ? 'opacity-0' : 'opacity-100'}`}>
+      {/* FLECHA IZQUIERDA (Ir a Aficiones) */}
+      {section === 'main' && (
+        <div 
+          className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-auto cursor-pointer group flex items-center gap-4"
+          onClick={() => setSection('hobbies')}
+        >
+          <div className="text-6xl text-cyan-500 group-hover:text-white transition-colors font-['Orbitron']">{'<'}</div>
+          <div className="hidden group-hover:block text-sm text-cyan-400 tracking-widest bg-black/80 p-2 border border-cyan-500">
+            SECTOR_AFICIONES
+          </div>
+        </div>
+      )}
+
+      {/* FLECHA DERECHA (Volver a Main) */}
+      {section === 'hobbies' && (
+        <div 
+          className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-auto cursor-pointer group flex items-center gap-4 flex-row-reverse"
+          onClick={() => setSection('main')}
+        >
+          <div className="text-6xl text-pink-500 group-hover:text-white transition-colors font-['Orbitron']">{'>'}</div>
+          <div className="hidden group-hover:block text-sm text-pink-400 tracking-widest bg-black/80 p-2 border border-pink-500">
+            RETORNO_A_BASE
+          </div>
+        </div>
+      )}
+      
       {/* Esquinas Decorativas (FUI) */}
       <div className="absolute top-4 left-4 border-t-2 border-l-2 border-cyan-400 w-8 h-8" />
       <div className="absolute top-4 right-4 border-t-2 border-r-2 border-cyan-400 w-8 h-8" />

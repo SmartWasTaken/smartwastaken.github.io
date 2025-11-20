@@ -12,6 +12,20 @@ export const PORTFOLIO_DATA = {
     danger: "#FF2A6D",    // Acento Peligro
     grid: "#32284A",      // Relleno
   },
+  hobbies: {
+    games: [
+      "GRIS", "Heavy Rain", "The Last of Us Part II", "Grand Theft Auto IV", "Red Dead Redemption 2", 
+      "Metal Gear Solid V", "Beyond Two Souls", "Detroit Become Human", "Limbo"
+    ],
+    movies: [
+      "Interstellar", "Blade Runner 2049", "The Matrix", "Ex Machina",
+      "Arrival", "Dune", "Akira", "Ghost in the Shell", "Tron: Legacy"
+    ],
+    series: [
+      "Mr. Robot", "Black Mirror", "Love, Death & Robots", "Severance",
+      "Westworld", "Arcane", "Altered Carbon"
+    ]
+  },
   projects: [
     {
       id: 1,
@@ -19,7 +33,7 @@ export const PORTFOLIO_DATA = {
       desc: "Space Resource Management Game",
       image: "https://img.itch.zone/aW1nLzIzNjg1MTQ3LnBuZw==/original/tZ%2B1fl.png",
       link: "https://hijacked-games.itch.io/nova",
-      modelPath: null, 
+      modelPath: "/models/gargantua.glb", 
       position: [0, 0, -15],
       color: "#00F0FF"
     },

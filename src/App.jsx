@@ -9,6 +9,7 @@ import { PORTFOLIO_DATA } from './store/Assets';
 import { CustomCursor } from './components/dom/CustomCursor';
 import { ProjectModal } from './components/dom/ProjectModal';
 import { Settings } from './components/dom/Settings';
+import { HobbiesModal } from './components/dom/HobbiesModal';
 
 function App() {
   const [dpr, setDpr] = useState(1.5); 
@@ -18,6 +19,7 @@ function App() {
       <CustomCursor />
       <HUD />
       <Settings />
+      <HobbiesModal />
       <ProjectModal />
       <Canvas
         dpr={dpr}
@@ -27,17 +29,13 @@ function App() {
         <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(1)} />
         <color attach="background" args={[PORTFOLIO_DATA.colors.void]} />
         
-        {/* STRELLAS MÁS RÁPIDAS PARA SENSACIÓN DE VELOCIDAD */}
         <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={2} />
         
-        {/* AQUI LA MAGIA: PAGES = NÚMERO DE PANTALLAS DE SCROLL */}
         <ScrollControls pages={4} damping={0.2}>
           <Suspense fallback={null}>
-             {/* El contenido 3D */}
             <SceneContent /> 
           </Suspense>
           
-          {/* El contenido HTML superpuesto */}
           <Overlay />
         </ScrollControls>
         
