@@ -55,7 +55,7 @@ export const PORTFOLIO_DATA = {
       link: "https://smartwastaken.itch.io/when-i-think-it-hurts",
       modelPath: null,
       position: [10, -3, -20],
-      color: "#008000"
+      color: "#FF0000"
     }
   ]
 };
