@@ -13,6 +13,7 @@ import { HobbiesModal } from './components/dom/HobbiesModal';
 
 function App() {
   const [dpr, setDpr] = useState(1.5); 
+  const isMobile = window.innerWidth < 768;
 
   return (
     <div className="w-full h-screen bg-black overflow-hidden">
@@ -22,9 +23,9 @@ function App() {
       <HobbiesModal />
       <ProjectModal />
       <Canvas
-        dpr={dpr}
+        dpr={isMobile ? [1, 1.5] : dpr}
         gl={{ antialias: false, toneMappingExposure: 1.5 }}
-        camera={{ position: [0, 0, 10], fov: 45 }}
+        camera={{ position: [0, 0, isMobile ? 16 : 10], fov: 45 }}
       >
         <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(1)} />
         <color attach="background" args={[PORTFOLIO_DATA.colors.void]} />
