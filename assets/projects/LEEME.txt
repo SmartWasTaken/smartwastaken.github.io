@@ -1,0 +1,12 @@
+Pon aquí una captura (o GIF recortado como imagen) por proyecto.
+Formato: JPG, 1280x720 (16:9), idealmente menos de 300 KB.
+Los nombres tienen que ser EXACTAMENTE estos:
+
+  nova.jpg
+  quantum.jpg
+  unchained.jpg
+  hurts.jpg
+  crosspaws.jpg
+  metus.jpg
+
+Si un archivo no existe, la web muestra un recuadro con el nombre que falta.
